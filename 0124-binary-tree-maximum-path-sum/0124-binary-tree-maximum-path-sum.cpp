@@ -32,6 +32,6 @@ public:
             ans = max(ans , right);
         }
         ans = max({ans , node -> val + left , node -> val + right , node -> val + right + left , node -> val});
-        return max({node -> val + left , node -> val + right , node -> val});
+        return max({left , right , 0}) + node -> val;
     } 
 };
