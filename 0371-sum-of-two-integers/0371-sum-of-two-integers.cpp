@@ -1,9 +1,9 @@
 class Solution {
 public:
-    int getSum(unsigned long long a, unsigned long long b) {
+    int getSum(unsigned int a, unsigned int b) {
         
         while(b) {
-            unsigned long long tmp = (a & b);
+            unsigned int tmp = (a & b);
             tmp *= 2;
             a = a ^ b;
             b = tmp;
