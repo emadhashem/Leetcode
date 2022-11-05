@@ -5,13 +5,13 @@ public:
         for(auto cur : points) {
             st.insert({ (cur[0] * cur[0]) + (cur[1] * cur[1]) , {cur[0] , cur[1]}});
         }
-        vector <vector <int> > ans;
+        points.clear();
         for(auto cur : st) {
             if(!k) break;
-            ans.push_back(cur.second);
+            points.push_back(cur.second);
             k--;
         }
-        return ans;
+        return points;
         
     }
 };
